@@ -11,6 +11,7 @@ grafana_dir_data: /var/lib/grafana
 grafana_dir_home: /usr/share/grafana
 grafana_dir_log: /var/log/grafana
 grafana_dir_plugins: /var/lib/grafana/plugins
+grafana_dir_pid_file: /var/run/grafana
 grafana_http_port: 3000
 grafana_group: grafana
 grafana_user: grafana
@@ -92,6 +93,7 @@ grafana_default:
   grafana_group: "{{ grafana_group }}"
   grafana_home: "{{ grafana_dir_home }}"
   grafana_user: "{{ grafana_user }}"
+  pid_file_dir: "{{ grafana_dir_pid_file }}"
   log_dir: "{{ grafana_dir_log }}"
   max_open_files: 10000
   plugins_dir: "{{ grafana_dir_plugins }}"
